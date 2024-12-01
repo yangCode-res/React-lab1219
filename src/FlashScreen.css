@@ -1,0 +1,43 @@
+.flash-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000; /* 背景色 */
+  color: #fff; /* 字体颜色 */
+  font-size: 2rem;
+  opacity: 0; /* 初始透明度 */
+  animation: fadeIn 3s ease-in forwards; /* 初始淡入效果 */
+  user-select: none; /* 禁止文字被选中 */
+}
+  
+.flash-screen.animate {
+    animation: fadeOut 2s ease-out forwards; /* 淡出效果 */
+  }
+  
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px); /* 从下方浮现 */
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0); /* 回到原位 */
+    }
+  }
+  
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+      transform: translateY(0);
+      background-color: #000; /* 确保背景色不变 */
+    }
+    to {
+      opacity: 0;
+      transform: translateY(-20px);
+      background-color: #000; /* 维持背景色 */
+    }
+  }
+  

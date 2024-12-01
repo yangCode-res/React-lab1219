@@ -1,0 +1,99 @@
+
+
+/* Header 样式 */
+.apple-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(7, 7, 7, 0.8);
+  color: #fff;
+  font-family: Arial, sans-serif;
+  height: 40px;
+  z-index: 100;
+}
+
+.nav-item {
+  text-decoration: none;
+  color: #fff;
+  padding: 1px 10px;
+  position: relative;
+  height: 35px;
+  transition: color 0.3s ease;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.nav-item:hover {
+  color: #939b9b;
+  text-decoration: underline;
+}
+
+.nav-item.currentActive::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #b2b5b8;
+  transition: all 0.3s ease;
+}
+
+/* Header 容器 */
+.apple-header-container {
+  display: flex;
+  align-items: center; /* 垂直居中 */
+  justify-content: center; /* 左右分布 */
+  width: 100%;
+  max-width: 1200px; /* 限制最大宽度 */
+  margin: 0 auto; /* 居中对齐 */
+  box-sizing: border-box; /* 包括内边距 */
+  height: 40px;
+}
+
+/* 导航菜单 */
+.apple-nav {
+  display: flex;
+  gap: 20px;
+}
+
+.apple-nav a {
+  text-decoration: none;
+  color: #fff;
+  display: flex; /* 使用 Flexbox */
+  align-items: center; /* 垂直居中 */
+  padding: 5px 10px;
+}
+
+/* 子菜单 */
+.apple-submenu {
+  position: relative; /* 相对于自身定位 */
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  overflow: visible;
+  z-index: 100;
+}
+.submenu-content{
+  background-color: rgba(22, 22, 23);
+  color: #fff;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.6s ease-in-out; 
+}
+.submenu-overlay {
+  width: 100%;
+  height: 0; /* 设置高度为视口的高度 */
+  background-color: rgba(255, 255, 255, 0.2);
+  filter: blur(5px);
+  z-index: 99;
+  transition: height 0.6s ease-in-out; 
+}
+.submenu-content.activeSubmenu{
+ max-height: 600px; /* 设置一个合适的最大高度值 */
+ overflow: visible;
+}
+.submenu-overlay.activeSubmenu{
+  height: 90vh;
+}
+
