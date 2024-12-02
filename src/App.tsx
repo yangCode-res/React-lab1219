@@ -6,15 +6,16 @@ const { Header, Footer, Content } = Layout;
 const headerStyle: React.CSSProperties = {
   textAlign: 'center',
   height: '40px',
-
+  
 };
 
 const contentStyle: React.CSSProperties = {
   textAlign: 'center',
-  minHeight: 'calc(100vh )', // 计算内容区的高度减去 Header 和 Footer 的高度
   lineHeight: '120px',
+  minHeight:120,
   color: '#fff',
-  backgroundColor: '#111111',
+  backgroundColor: '#111111', 
+  overflowY:'auto'
 };
 
 const footerStyle: React.CSSProperties = {

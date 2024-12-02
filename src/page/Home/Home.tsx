@@ -2,9 +2,16 @@ import './Home.css'
 const Home: React.FC = () => {
     return (<div className="mainContainer">
       <div className='postContainer'>
-        this is first
+        <div className='imageBox'>
+        <img src='../src/assets/kangyan.svg' >
+        </img>
+       
+        </div>
+        <div>
+          <span> 导师：康雁</span>
+        </div>
       </div>
-      <div>
+      <div className='secPostContainer'>
         this is second
       </div>
 

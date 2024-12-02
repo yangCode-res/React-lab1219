@@ -7,7 +7,7 @@ const FlashScreen: React.FC = () => {
   useEffect(() => {
     const fadeOutTimer = setTimeout(() => {
         setShowAnimation(true);
-      }, 4000); // 4秒后触发淡出 
+      }, 3000); // 4秒后触发淡出 
     const timer = setTimeout(() => {
       navigate('/app')
     }, 5000); // 动画持续时间（毫秒）
