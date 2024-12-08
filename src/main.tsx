@@ -5,6 +5,7 @@ import App from './App.tsx'
 import Home from './page/Home/Home.tsx'
 import FlashScreen from './FlashScreen.tsx'
 import 'animate.css';
+import 'virtual:windi.css'
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <BrowserRouter>

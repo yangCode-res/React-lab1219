@@ -7,7 +7,7 @@ const Home: React.FC = () => {
         <img src='../src/assets/kangyan.svg'  width={100} height={150}>
         </img>
       </div>
-      <span className='SpanLeft'> 导师：康雁</span>
+      <span className='SpanLeft font-serif mt-2 text-4xl'> 导师：康雁</span>
       <span className='SpanLeft'> 联系方式:1378055043@qq.com</span>
       </div>
      
