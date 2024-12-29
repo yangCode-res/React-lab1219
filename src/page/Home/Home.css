@@ -6,13 +6,11 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     width: 100%;
     height: 700px;
     background-color: rgb(7, 3, 2);
     display: flex;
-    align-items: center;
-    justify-content: center;
 }
 .secPostContainer{
     width: 100%;
@@ -23,9 +21,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100px;
-    height: 150px;
-    border: 1px solid white;
 }
 .leftBox{
     height: 200px;
@@ -33,7 +28,12 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    @apply ml-4;
+}
+.rightBox{
+    height: 200px;
+    @apply flex justify-center items-center;
 }
 .SpanLeft{
-    height: 20px;
+    height: 40px;
 }
