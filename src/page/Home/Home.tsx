@@ -1,8 +1,9 @@
 import "./Home.css";
 import { useState } from "react";
 import { Card } from "antd";
-import { Collapse ,theme} from 'antd';
+import { Collapse} from 'antd';
 import GradientButton from "../../component/gradientButton";
+import ImageWithBlank from "../../component/ImageWithBlank";
 import type { CollapseProps } from 'antd';
 const { Meta } = Card;
 
@@ -30,7 +31,6 @@ const text = `
     },
   ];
 const Home: React.FC = () => {
-  const { token } = theme.useToken();
   const [isActivate,setIsActivate]=useState(false)
   const onIsActivate=()=>{
     setIsActivate((prevState) => !prevState)
@@ -73,7 +73,19 @@ const Home: React.FC = () => {
           
         </div>
       </div>
-      <div className="secPostContainer">this is second</div>
+      <div className="secPostContainer " >
+       
+        <ImageWithBlank imageSrc="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" altText="示例图片" blankHeight="50px" imgHeight="250px" width="200px"></ImageWithBlank>
+        <ImageWithBlank imageSrc="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" altText="示例图片" blankHeight="50px" imgHeight="250px" width="200px"></ImageWithBlank>
+        <ImageWithBlank imageSrc="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" altText="示例图片" blankHeight="50px" imgHeight="250px" width="200px"></ImageWithBlank>
+        <ImageWithBlank imageSrc="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" altText="示例图片" blankHeight="50px" imgHeight="250px" width="200px"></ImageWithBlank>
+        <ImageWithBlank imageSrc="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" altText="示例图片" blankHeight="50px" imgHeight="250px" width="200px"></ImageWithBlank>
+        <ImageWithBlank imageSrc="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" altText="示例图片" blankHeight="50px" imgHeight="250px" width="200px"></ImageWithBlank>
+        <ImageWithBlank imageSrc="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" altText="示例图片" blankHeight="50px" imgHeight="250px" width="200px"></ImageWithBlank>
+        <ImageWithBlank imageSrc="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" altText="示例图片" blankHeight="50px" imgHeight="250px" width="200px"></ImageWithBlank>
+        
+        
+      </div>
     </div>
   );
 };

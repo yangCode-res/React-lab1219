@@ -12,11 +12,27 @@
     background-color: rgb(7, 3, 2);
     display: flex;
 }
-.secPostContainer{
-    width: 100%;
-    height: 700px;
+.secPostContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 200px); /* 每列固定宽度为200px */
+    grid-auto-rows: auto; /* 自动调整行高 */
+    column-gap: 20px; /* 列间距为5px */
+    row-gap: 10px; /* 行间距为10px */
+    justify-content: center; /* 让网格整体居中对齐 */
+    padding: 26px 80px 5px 80px;
     background-color: rgb(243, 243, 245);
+  }
+  
+  
+
+.secPostContainer img {
+    width: 100%; /* 图片宽度占满父元素 */
+    height: auto; /* 自动调整高度保持比例 */
+    object-fit: cover; /* 确保图片按比例缩放并填充容器 */
+    display: block; /* 防止图片周围出现空白 */
+    border: 1px solid #ccc; /* 可选：为图片添加边框 */
 }
+
 .imageBox{
     display: flex;
     align-items: center;

@@ -1,0 +1,10 @@
+.image-with-blank {
+    transition: transform 0.3s ease; /* 添加动画过渡效果 */
+    transform-origin: left center; /* 旋转中心点设置为左侧中部 */
+    perspective: 800px; /* 添加透视效果，值越小透视感越强 */
+  }
+  
+  .image-with-blank:hover {
+    transform: rotateY(-20deg); /* 鼠标悬浮时绕Y轴向左旋转45度 */
+  }
+  
