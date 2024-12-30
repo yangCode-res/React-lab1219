@@ -21,17 +21,11 @@
     justify-content: center; /* 让网格整体居中对齐 */
     padding: 26px 80px 5px 80px;
     background-color: rgb(243, 243, 245);
+    height: 740px;
   }
   
   
 
-.secPostContainer img {
-    width: 100%; /* 图片宽度占满父元素 */
-    height: auto; /* 自动调整高度保持比例 */
-    object-fit: cover; /* 确保图片按比例缩放并填充容器 */
-    display: block; /* 防止图片周围出现空白 */
-    border: 1px solid #ccc; /* 可选：为图片添加边框 */
-}
 
 .imageBox{
     display: flex;

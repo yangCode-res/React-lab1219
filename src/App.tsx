@@ -19,16 +19,19 @@ const contentStyle: React.CSSProperties = {
 };
 
 const footerStyle: React.CSSProperties = {
-  textAlign: 'center',
+  display:'flex',
+  alignItems:'center',
+  justifyContent:'center',
   color: '#fff',
-  backgroundColor: '#4096ff',
+  backgroundColor: 'rgb(202, 206, 207)',
+  height:'40px'
 };const App:React.FC=()=>{
   return(
     <Flex gap="middle" wrap>
     <Layout className='app-layout'>
       <Header style={headerStyle}><HeaderLayout/></Header>
       <Content style={contentStyle}><Outlet/></Content>
-      <Footer style={footerStyle}>Footer</Footer>
+      <Footer style={footerStyle}>Welcome to Lab-1219</Footer>
     </Layout>
   </Flex>
   )

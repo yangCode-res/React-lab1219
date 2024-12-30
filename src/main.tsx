@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import App from './App.tsx'
 import Home from './page/Home/Home.tsx'
 import FlashScreen from './FlashScreen.tsx'
+import Apply from './page/Apply/apply.tsx'
 import 'animate.css';
 import 'virtual:windi.css'
 createRoot(document.getElementById('root')!).render(
@@ -20,6 +21,7 @@ createRoot(document.getElementById('root')!).render(
       <Route path='/' element={<FlashScreen/>}></Route>
       <Route path='/app' element={<App/>}>
       <Route index element={<Home/>}></Route>
+      <Route path='apply' element={<Apply/>}></Route>
       </Route>
       
 

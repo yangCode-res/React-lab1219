@@ -5,13 +5,15 @@ const Header: React.FC = () => {
   const [currentActivate, setCurrentActivate] = useState<number>(0);
   const [overlay, setOverlay] = useState<boolean>(false);
   const navItems = [
-    "了解详情",
-    "加入我们",
-    "团队成果",
-    "成员介绍",
-    "就业展示",
-    "最近通知",
-    "技术支持",
+    {
+      name:"了解详情",
+      href:"/app"
+    },
+    {
+      name:"加入我们",
+      href:"/app/apply"
+    },
+    
   ];
 
   return (
@@ -21,16 +23,14 @@ const Header: React.FC = () => {
           {navItems.map((item, index) => (
             <a
               key={index}
-              href="/app"
+              href={item.href}
               className={`nav-item ${currentActivate === index ? 'currentActive' : ''}`}
               onMouseEnter={() => {
-                console.log('enter');
-                
                 setOverlay(true);
               }}
               onMouseDown={() => setCurrentActivate(index)}
             >
-              {item}
+              {item.name}
             </a>
           ))}
         </nav>
