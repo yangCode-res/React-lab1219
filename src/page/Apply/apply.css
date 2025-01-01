@@ -1,0 +1,20 @@
+.ApplyContainer{
+    background-color: rgb(243, 243, 245);
+    height: 100%;
+    padding: 100px 10px 10px 100px;
+}
+.ApplyShowBox{
+    margin-top: 20px;
+    width: 65vw;
+    height: 600px;
+    color:black;
+    background-color: rgb(215, 215, 217);
+}
+.formItem{
+    margin-top: 20px;
+    margin-left: 25px;
+    height: 600px;
+    color:black;
+    background-color:rgb(166, 166, 223);
+    width: 25vw;
+}

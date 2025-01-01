@@ -1,9 +1,19 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import './Header.css';
-
+import {AppState} from '../store'
+import { SET_CURRENT_ACTIVATE } from "../store";
+import { Link } from 'react-router-dom';
 const Header: React.FC = () => {
-  const [currentActivate, setCurrentActivate] = useState<number>(0);
+  const currentActivate=useSelector((state:AppState)=>state.currentActivate)
+  const dispatch=useDispatch()
   const [overlay, setOverlay] = useState<boolean>(false);
+  const handleClick = (index: number) => {
+    dispatch({type:SET_CURRENT_ACTIVATE,payload:index})
+  };
+  useEffect(() => {
+    console.log(currentActivate);  // 这里会在 currentActivate 更新后打印新的值
+  }, [currentActivate]);  // 依赖于 currentActivate 状态
   const navItems = [
     {
       name:"了解详情",
@@ -17,21 +27,25 @@ const Header: React.FC = () => {
   ];
 
   return (
+    
     <header className="apple-header">
       <div className="apple-header-container">
         <nav className="apple-nav">
           {navItems.map((item, index) => (
-            <a
+            <Link
               key={index}
-              href={item.href}
+              to={item.href}
               className={`nav-item ${currentActivate === index ? 'currentActive' : ''}`}
               onMouseEnter={() => {
                 setOverlay(true);
               }}
-              onMouseDown={() => setCurrentActivate(index)}
+              onClick={()=>{
+                handleClick(index)
+                console.log('this is index',index);
+              }}
             >
               {item.name}
-            </a>
+            </Link>
           ))}
         </nav>
       </div>

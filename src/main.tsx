@@ -7,8 +7,11 @@ import FlashScreen from './FlashScreen.tsx'
 import Apply from './page/Apply/apply.tsx'
 import 'animate.css';
 import 'virtual:windi.css'
+import { Provider } from 'react-redux';
+import {store} from './store'
 createRoot(document.getElementById('root')!).render(
-  <StrictMode>
+  <Provider store={store}>
+    <StrictMode>
     <BrowserRouter>
     <Suspense
         fallback={
@@ -30,5 +33,6 @@ createRoot(document.getElementById('root')!).render(
     
     
     </BrowserRouter>
-  </StrictMode>,
+  </StrictMode>
+  </Provider>
 )
