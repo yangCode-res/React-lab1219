@@ -1,7 +1,7 @@
 .ApplyContainer{
     background-color: rgb(243, 243, 245);
     height: 100%;
-    padding: 100px 10px 10px 100px;
+    padding: 50px 10px 10px 100px;
 }
 .ApplyShowBox{
     margin-top: 20px;
@@ -11,10 +11,15 @@
     background-color: rgb(215, 215, 217);
 }
 .formItem{
+    display: flex;
+    padding-top: 20px;
     margin-top: 20px;
     margin-left: 25px;
     height: 600px;
     color:black;
-    background-color:rgb(166, 166, 223);
-    width: 25vw;
+    background-color:rgb(193, 196, 200);
+    width: 500px;
+    overflow: scroll;
+    scrollbar-width: none; /* Firefox */
+
 }
